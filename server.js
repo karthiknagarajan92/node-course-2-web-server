@@ -39,6 +39,19 @@ app.get('/about',function(req,res){
 	});
 });
 
+app.get('/projects',function(req,res){
+	res.render('projects.hbs',{
+		pageTitle:'projects Page',
+		welcomeMessage:'Welcome to the projects page!'
+	});
+});
+
+app.get('/home',function(req,res){
+	res.render('home.hbs',{
+		pageTitle:'Home Page',
+		welcomeMessage:'Welcome to the Home page!'
+	});
+});
 app.listen(port,function(){
 	console.log("Server started and listening at ${port}");
 });
